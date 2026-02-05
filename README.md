@@ -1,34 +1,123 @@
-# AI_DEVICE_VOLUME_CONTROL
-Smart AI-based system to control device volume using hand gestures
+🖐️ AI Device Volume Control using Hand Gestures
 
-# AI Device Volume Control
+This project is a real-time hand gesture–based system volume and media controller built using OpenCV, MediaPipe, and PyCaw.
+It uses a webcam to detect hand gestures and allows you to control system volume, mute/unmute, play/pause media, and lock/unlock controls without touching the keyboard or mouse.
 
-This project is a smart AI-based volume control system that uses gesture recognition through computer vision techniques to control media volume on a device. Designed to enable touchless interaction, it combines the power of computer vision and audio device APIs to provide a hands-free, intuitive user experience.
+🚀 Features
 
-## 📌 Project Objective
+🎥 Real-time hand tracking using MediaPipe Hands
 
-To develop an AI-powered application that can detect hand gestures through a webcam and translate them into volume control commands such as volume up, volume down, mute, and unmute.
+🔊 Volume control using thumb–index finger distance
 
-## ⚙️ Tech Stack
+🔇 Mute / Unmute using pinky finger gesture
 
-- **Language**: Python  
-- **Computer Vision**: OpenCV  
-- **Machine Learning**: MediaPipe (for hand tracking)  
-- **Audio Control**: Pycaw  
-- **Others**: NumPy, math
+⏯ Play / Pause media using finger gestures
 
-## Features
-Real-time hand gesture recognition
-System volume control via webcam
-Touchless interaction
-Visual feedback on screen
+🔒 Lock / Unlock system controls using second hand
 
-## 🛠️ Installation
+📊 On-screen UI:
 
-```bash
-git clone https://github.com/vishwa2530/AI_DEVICE_VOLUME_CONTROL.git
-cd AI_DEVICE_VOLUME_CONTROL
-pip install -r requirements.txt
-python main.py
+Volume bar
+
+Volume percentage
+
+FPS counter
+
+Lock/Unlock status
+
+🖐️ Gesture Controls
+🔊 Volume Control
+
+Move thumb and index finger closer → decrease volume
+
+Move thumb and index finger apart → increase volume
+
+🔇 Mute / Unmute
+
+Pinky finger up → Mute
+
+Pinky finger down → Unmute
+
+⏯ Media Control
+
+Middle finger up → Play
+
+Ring finger up → Pause
+(1-second cooldown to prevent multiple triggers)
+
+🔒 Lock / Unlock
+
+Use second hand (leftmost hand):
+
+✊ Closed fist → LOCK controls
+
+✋ Open palm → UNLOCK controls
+
+🛠️ Requirements
+💻 Operating System
+
+Windows only (because pycaw controls Windows system volume)
+
+🐍 Python Version
+
+✅ Python 3.9 / 3.10 / 3.11
+❌ Python 3.12+ / 3.14 is not supported by MediaPipe
+
+📦 Required Libraries
+
+Install all dependencies using:
+
+pip install opencv-python mediapipe numpy pyautogui pycaw comtypes
+
+▶️ How to Run
+
+Clone or download the project
+
+Open Command Prompt
+
+Navigate to the project folder:
+
+cd AI_DEVICE_VOLUME_CONTROL-main
 
 
+Run the script:
+
+python AI_volume_control.py
+
+
+Press ESC to exit the application
+
+⚠️ Important Notes
+
+Ensure no file or folder is named mediapipe.py in your project directory
+(this causes AttributeError: module 'mediapipe' has no attribute 'solutions')
+
+Run the script using Python, not Java or Code Runner
+
+Allow camera access when prompted
+
+Ensure only one instance of the webcam is running
+
+🧠 Technologies Used
+
+Python
+
+OpenCV
+
+MediaPipe
+
+NumPy
+
+PyAutoGUI
+
+PyCaw (Windows Audio Control)
+
+📸 Output Preview
+
+Webcam feed with hand landmarks
+
+Volume bar on the left
+
+FPS counter
+
+Lock/Unlock status display
